@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Расчет Course Handicap</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        input, button {
+            margin-top: 10px;
+            display: block;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Расчет Course Handicap</h1>
+    <form th:action="@{/calculate}" method="post">
+        <label for="handicapIndex">Handicap Index:</label>
+        <input type="number" id="handicapIndex" name="handicapIndex" step="0.1" required>
+
+        <label for="slopeRating">Slope Rating:</label>
+        <input type="number" id="slopeRating" name="slopeRating" step="0.1" required>
+
+        <label for="courseRating">Course Rating:</label>
+        <input type="number" id="courseRating" name="courseRating" step="0.1" required>
+
+        <label for="par">Par:</label>
+        <input type="number" id="par" name="par" step="1" required>
+
+        <button type="submit">Рассчитать</button>
+    </form>
+</div>
+</body>
+</html>

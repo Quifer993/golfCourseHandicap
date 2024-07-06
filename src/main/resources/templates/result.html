@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>Result Course Handicap</title>
+</head>
+<body>
+<div class="container">
+    <h1>Результат расчета Course Handicap</h1>
+    <div class="result">
+            <p th:text="'Course Handicap: ' + ${#numbers.formatDecimal(courseHandicap, 1, 2)}"></p>
+    </div>
+    <a th:href="@{/}">Назад</a>
+</div>
+</body>
+</html>
